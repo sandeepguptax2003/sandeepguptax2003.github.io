@@ -1,0 +1,32 @@
+[
+    {
+      "name": "JungleBuy",
+      "desc": "It is an E-commerce website for all kind of Fashion, Beauty & Cosmetics, Toys and Electronics Products",
+      "image": "junglebuy",
+      "category": "HTM,CSS,JS",
+      "links": {
+        "view": "https://remarkable-daffodil-7d85ca.netlify.app/index.html",
+        "code": "https://github.com/V-sukumar/agreeable-transport-9100"
+      }
+    },
+    {
+      "name": "",
+      "desc": "",
+      "image": "",
+      "category": "",
+      "links": {
+        "view": "",
+        "code": ""
+      }
+    },
+    {
+      "name": "",
+      "desc": "",
+      "image": "",
+      "category": "",
+      "links": {
+        "view": "#",
+        "code": "#"
+      }
+    }
+  ]
