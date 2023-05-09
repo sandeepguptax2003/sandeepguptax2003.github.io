@@ -957,8 +957,6 @@ header .navbar ul li a:hover {
 #github-stats-card {
   margin-left: 220px;
 }
-#github-streak-stats {
-}
 
 /* github calender media queries starts  */
 @media only screen and (max-width: 768px) {
