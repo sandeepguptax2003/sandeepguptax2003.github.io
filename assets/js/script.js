@@ -169,11 +169,6 @@ VanillaTilt.init(document.querySelectorAll(".tilt"), {
 // <!-- tilt js effect ends -->
 
 // Github calender starts
-new Crate({
-  server: "",
-  channel: "",
-  shard: "",
-});
 
 new WidgetbotHtmlEmbed().render();
 new GitHubCalendar(".github-calendar", "sandeepguptax2003", {
