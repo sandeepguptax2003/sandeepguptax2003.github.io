@@ -170,9 +170,9 @@ VanillaTilt.init(document.querySelectorAll(".tilt"), {
 
 // Github calender starts
 new Crate({
-  server: "676170056926734848",
-  channel: "676170056926734855",
-  shard: "https://e.widgetbot.io",
+  server: "",
+  channel: "",
+  shard: "",
 });
 
 new WidgetbotHtmlEmbed().render();
