@@ -168,33 +168,6 @@ VanillaTilt.init(document.querySelectorAll(".tilt"), {
 });
 // <!-- tilt js effect ends -->
 
-// Github calender starts
-
-new WidgetbotHtmlEmbed().render();
-new GitHubCalendar(".github-calendar", "sandeepguptax2003", {
-  responsive: true,
-});
-
-new GitHubStatsCard("#github-stats-card", "sandeepguptax2003", {
-  showHeader: false,
-  showBorder: false,
-  showIcons: true,
-  showLanguage: false,
-  locale: "en",
-});
-
-new GitHubStreakStats("#github-streak-stats", "sandeepguptax2003", {
-  responsive: true,
-  tooltips: true,
-});
-
-new GitHubTopLanguages("#github-top-langs", "sandeepguptax2003", {
-  showHeader: false,
-  layout: "compact",
-});
-
-// Github calender ends
-
 // disable developer mode
 document.onkeydown = function (e) {
   if (e.keyCode == 123) {
