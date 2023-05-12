@@ -4,366 +4,79 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="keywords" content="sandeep gupta, portfolio, sandeep" />
-    <meta
-      name="description"
-      content="Welcome to sandeep's Portfolio. Full-Stack Web Developer"
-    />
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="./assets/css/style.css" />
-    <!-- Font Awesome -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <!-- Favicon -->
-    <link
-      id="favicon"
-      rel="shortcut icon"
-      href="./assets/images/profile2.jpg"
-      type="image/x-png"
-    />
-    <title>Sandeep Gupta - Portfolio</title>
+    <title>Document</title>
   </head>
-  <body oncontextmenu="return false">
-    <!-- navbar starts -->
-    <header>
-      <a href="/" class="logo"><i class="fab"></i> S A N D E E P</a>
+  <body>
+    <nav id="nav-menu">
+      <ul>
+        <li><a href="#home" class="nav-link home">Home</a></li>
+        <li><a href="#about" class="nav-link about">About</a></li>
+        <li><a href="#skills" class="nav-link skills">Skills</a></li>
+        <li><a href="#projects" class="nav-link projects">Projects</a></li>
+        <li><a href="#contact" class="nav-link contact">Contact</a></li>
+        <li>
+          <a href="link/to/resume.pdf" target="_blank" class="nav-link resume"
+            >Resume</a
+          >
+        </li>
+      </ul>
+    </nav>
 
-      <div id="nav-menu" class="fas fa-bars"></div>
-      <nav class="navbar">
-        <ul>
-          <li><a class="nav-link home active" href="#home">Home</a></li>
-          <li><a class="nav-link about" href="#about">About</a></li>
-          <li><a class="nav-link skills" href="#skills">Skills</a></li>
-          <li><a class="nav-link projects" href="#work">projects</a></li>
-          <li><a class="nav-link contact" href="#contact">Contact</a></li>
-          <li>
-            <a class="nav-link resume" id="resume-link-2" href="#about"
-              >Resume</a
-            >
-          </li>
-        </ul>
-      </nav>
-    </header>
-    <!-- navbar ends -->
+    <section id="home">
+      <img src="path/to/professional/photo" alt="My Photo" class="home-img" />
+      <h1 id="user-detail-name">Your Name</h1>
+      <p id="user-detail-intro">Formal introduction goes here.</p>
+      <a href="link/to/resume.pdf" target="_blank" id="resume-link-2"
+        >View/Download Resume</a
+      >
+    </section>
 
-    <!-- hero section starts -->
-    <section class="home" id="home">
-      <div id="particles-js"></div>
+    <section id="about" class="about section">
+      <h2>About Me</h2>
+      <p>Some information about me.</p>
+      <a href="link/to/resume.pdf" target="_blank" id="resume-link-2"
+        >View/Download Resume</a
+      >
+    </section>
 
-      <div class="content">
-        <h2 id="user-detail-name">
-          Hi There,<br />
-          I'm Sandeep <span>Gupta</span>
-        </h2>
-        <p>i am into <span class="typing-text"></span></p>
-        <a href="#about" class="btn"
-          ><span>About Me</span>
-          <i class="fas fa-arrow-circle-down"></i>
-        </a>
-        <div class="socials">
-          <ul class="social-icons">
-            <li>
-              <a
-                id="contact-linkedin"
-                aria-label="LinkedIn"
-                href="https://www.linkedin.com/in/sandeep-gupta-a1b679263/"
-                target="_blank"
-                ><i class="fab fa-linkedin"></i
-              ></a>
-            </li>
-            <li>
-              <a
-                id="contact-github"
-                aria-label="GitHub"
-                href="https://github.com/sandeepguptax2003"
-                target="_blank"
-                ><i class="fab fa-github"></i
-              ></a>
-            </li>
-            <li>
-              <a class="twitter" aria-label="Twitter" href="" target="_blank"
-                ><i class="fab fa-twitter"></i
-              ></a>
-            </li>
-          </ul>
-        </div>
-      </div>
-      <div class="home-img">
+    <section id="skills">
+      <h2>Skills</h2>
+      <div class="skills-card">
         <img
-          draggable="false"
-          class="tilt"
-          src="./assets/images/profile2.jpg"
-          alt=""
+          src="path/to/skills/image"
+          alt="Skill Image"
+          class="skills-card-img"
         />
+        <h3 class="skills-card-name">Skill Name</h3>
       </div>
-    </section>
-    <!-- hero section ends -->
-
-    <!-- about section starts -->
-    <section class="about" id="about">
-      <h2 class="heading">
-        <i class="fas fa-user-alt"></i> About <span>Me</span>
-      </h2>
-
-      <div class="row">
-        <div class="image">
-          <img
-            draggable="false"
-            class="tilt"
-            src="./assets/images/profile2.jpg"
-            alt=""
-          />
-        </div>
-        <div class="content">
-          <p id="user-detail-intro">
-            I am an enthusiastic web developer with extensive experience working
-            alone and as part of a team on often time-sensitive, challenging
-            projects.
-          </p>
-
-          <div class="resume-link-2">
-            <a
-              href="./assets/images/Sandeep-Gupta-Resume.pdf"
-              target="_blank"
-              class="btn"
-              ><span>Resume</span>
-              <i class="fas fa-chevron-right"></i>
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- about section ends -->
-
-    <!-- skills section starts -->
-    <section class="skills" id="skills">
-      <h2 class="heading">
-        <i class="fas fa-laptop-code"></i> Skills & <span>Tools</span>
-      </h2>
-
-      <div class="container">
-        <div class="row" id="skillsContainer"></div>
-      </div>
-    </section>
-    <!-- skills section ends -->
-
-    <!-- work project section starts -->
-    <section class="project-card" id="work">
-      <h2 class="heading">
-        <i class="fas fa-laptop-code"></i> Projects <span>Made</span>
-      </h2>
-
-      <div class="box-container"></div>
-
-      <div class="viewall">
-        <a href="/projects" class="btn"
-          ><span>View All</span>
-          <i class="fas fa-arrow-right"></i>
-        </a>
-      </div>
-    </section>
-    <!-- work project section ends -->
-
-    <!-- Github calender section starts -->
-
-    <section id="github-sec">
-      <div class="github react-activity-calendar">
-        <h1>GitHub Statistics</h1>
-        <div>
-          <script src="https://unpkg.com/github-calendar@latest/dist/github-calendar.min.js"></script>
-          <link
-            rel="stylesheet"
-            href="https://unpkg.com/github-calendar@latest/dist/github-calendar-responsive.css"
-          />
-          <div class="calendar react-activity-calendar"></div>
-          <div>
-            <a href="https://github.com/sandeepguptax2003" target="_blank"
-              ><img
-                id="github-stats-card"
-                src="https://github-readme-stats.vercel.app/api?username=sandeepguptax2003&show_icons=true&theme=gotham"
-            /></a>
-            <a href="https://github.com/sandeepguptax2003" target="_blank"
-              ><img
-                id="github-streak-stats"
-                src="https://github-readme-streak-stats.herokuapp.com?user=sandeepguptax2003&theme=gotham&hide_border=false"
-            /></a>
-          </div>
-          <div>
-            <a href="https://github.com/sandeepguptax2003" target="_blank"
-              ><img
-                id="github-top-langs"
-                src="https://github-readme-stats.vercel.app/api/top-langs/?username=sandeepguptax2003&layout=compact&theme=gotham"
-            /></a>
-          </div>
-        </div>
-      </div>
+      <a href="link/to/resume.pdf" target="_blank" id="resume-link-2"
+        >View/Download Resume</a
+      >
     </section>
 
-    <!-- Github calender section ends -->
-
-    <!-- contact section starts -->
-    <section class="contact" id="contact">
-      <h2 class="heading">
-        <i class="fas fa-headset"></i> Get in <span>Touch</span>
-      </h2>
-
-      <div class="container">
-        <div class="content">
-          <div class="image-box">
-            <img draggable="false" src="./assets/images/contact1.png" alt="" />
-          </div>
-          <form id="contact-form">
-            <div class="form-group">
-              <div class="field">
-                <input type="text" name="name" placeholder="Name" required />
-                <i class="fas fa-user"></i>
-              </div>
-              <div class="field">
-                <input type="text" name="email" placeholder="Email" required />
-                <i class="fas fa-envelope"></i>
-              </div>
-              <div class="field">
-                <input type="text" name="phone" placeholder="Phone" />
-                <i class="fas fa-phone-alt"></i>
-              </div>
-              <div class="message">
-                <textarea
-                  placeholder="Message"
-                  name="message"
-                  required
-                ></textarea>
-                <i class="fas fa-comment-dots"></i>
-              </div>
-            </div>
-            <div class="button-area">
-              <button type="submit">
-                Submit <i class="fa fa-paper-plane"></i>
-              </button>
-            </div>
-          </form>
-        </div>
+    <section id="projects">
+      <h2>Projects</h2>
+      <div class="project-card">
+        <img src="path/to/project/image" alt="Project Image" />
+        <h3 class="project-title">Project Title</h3>
+        <p class="project-description">Project description goes here.</p>
+        <p class="project-tech-stack">Tech stack used: tech1, tech2, tech3</p>
+        <a
+          href="link/to/project/github/repo"
+          target="_blank"
+          class="project-github-link"
+          >GitHub repository</a
+        >
+        <a
+          href="link/to/project/deployed/link/or/video"
+          target="_blank"
+          class="project-deployed-link"
+          >Deployed link or video</a
+        >
       </div>
+      <a href="link/to/resume.pdf" target="_blank" id="resume-link-2"
+        >View/Download Resume</a
+      >
     </section>
-    <!-- contact section ends -->
-
-    <!-- footer section starts -->
-    <section class="footer">
-      <div class="box-container">
-        <div class="box">
-          <h3>Sandeep's Portfolio</h3>
-          <p>
-            Thank you for visiting my personal portfolio website. Connect with
-            me over socials. <br />
-            <br />
-            Keep Rising 🚀. Connect with me over live chat!
-          </p>
-        </div>
-
-        <div class="box">
-          <h3>quick links</h3>
-          <a href="#home"><i class="fas fa-chevron-circle-right"></i> home</a>
-          <a href="#about"><i class="fas fa-chevron-circle-right"></i> about</a>
-          <a href="#skills"
-            ><i class="fas fa-chevron-circle-right"></i> skills</a
-          >
-          <a href="#projects"
-            ><i class="fas fa-chevron-circle-right"></i> projects</a
-          >
-          <a href="#contact"
-            ><i class="fas fa-chevron-circle-right"></i> contact</a
-          >
-          <a href="#resume"
-            ><i class="fas fa-chevron-circle-right"></i> resume</a
-          >
-        </div>
-
-        <div class="box">
-          <h3>contact info</h3>
-          <p id="contact-phone"><i class="fas fa-phone"></i>+91 7847940928</p>
-          <p id="contact-email">
-            <i class="fas fa-envelope"></i>sandeepguptax2003@gmail.com
-          </p>
-          <p><i class="fas fa-map-marked-alt"></i>Odisha, India-769041</p>
-          <div class="share">
-            <a
-              href="https://www.linkedin.com/in/sandeep-gupta-a1b679263/"
-              class="fab fa-linkedin"
-              aria-label="LinkedIn"
-              target="_blank"
-            ></a>
-            <a
-              href="https://github.com/sandeepguptax2003"
-              class="fab fa-github"
-              aria-label="GitHub"
-              target="_blank"
-            ></a>
-
-            <a
-              href=""
-              class="fab fa-twitter"
-              aria-label="Twitter"
-              target="_blank"
-            ></a>
-          </div>
-        </div>
-      </div>
-
-      <h1 class="credit">
-        Made with <i class="fa fa-heart pulse"></i> by
-        <a href=""> sandeep gupta</a>
-      </h1>
-    </section>
-    <!-- footer section ends -->
-
-    <!-- ==== ALL MAJOR JAVASCRIPT CDNS STARTS ==== -->
-    <!-- jquery cdn -->
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
-      integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    ></script>
-
-    <!-- typed.js cdn -->
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.5/typed.min.js"
-      integrity="sha512-1KbKusm/hAtkX5FScVR5G36wodIMnVd/aP04af06iyQTkD17szAMGNmxfNH+tEuFp3Og/P5G32L1qEC47CZbUQ=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    ></script>
-
-    <!-- particle.js links -->
-    <script src="./assets/js/particles.min.js"></script>
-    <script src="./assets/js/app.js"></script>
-
-    <!-- Github calender library  -->
-    <script src="https://cdn.jsdelivr.net/npm/react-github-calendar/dist/github-calendar.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@widgetbot/html-embed@1.1.0/dist/widgetbot-html-embed.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@widgetbot/crate@1.0.0/dist/crate.full.min.js"></script>
-
-    <!-- vanilla tilt.js links -->
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js"
-      integrity="sha512-SttpKhJqONuBVxbRcuH0wezjuX+BoFoli0yPsnrAADcHsQMW8rkR84ItFHGIkPvhnlRnE2FaifDOUw+EltbuHg=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    ></script>
-
-    <!-- scroll reveal anim -->
-    <script src="https://unpkg.com/scrollreveal"></script>
-
-    <script
-      type="text/javascript"
-      src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"
-    ></script>
-
-    <!-- ==== ALL MAJOR JAVASCRIPT CDNS ENDS ==== -->
-
-    <script src="./assets/js/script.js"></script>
   </body>
 </html>
