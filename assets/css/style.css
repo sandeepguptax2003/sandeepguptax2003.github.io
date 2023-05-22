@@ -938,14 +938,21 @@ header .navbar ul li a:hover {
   color: #444444;
   padding: 20px;
   margin-top: 200px;
-  background: linear-gradient(to bottom, #f4a4f1, #6cfdff, #f3ae83);
+  background: linear-gradient(to bottom, #00002d, #00002d, #00002d);
 }
 
-#github-sec h1 {
-  font-size: 38px;
+#github-sec i {
+  font-size: 30px;
+  font-weight: 700;
   margin-bottom: 20px;
-  text-align: center;
-  color: #000000;
+  margin-left: 600px;
+  color: #ffffff;
+}
+
+#github-sec i span {
+  font-size: 30px;
+  font-weight: 700;
+  color: #ebff0c;
 }
 
 #github-top-langs {
@@ -965,7 +972,7 @@ header .navbar ul li a:hover {
     margin-top: 20px;
   }
 
-  #github-sec h1 {
+  #github-sec i {
     font-size: 24px;
   }
 
