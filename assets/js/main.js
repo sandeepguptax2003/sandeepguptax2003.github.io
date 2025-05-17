@@ -1,39 +1,21 @@
+/*=============== SCROLL REVEAL ANIMATION ===============*/
+const sr = ScrollReveal({
+  origin: "top",
+  distance: "60px",
+  duration: 2500,
+  delay: 400,
+  reset: true,
+});
+
 /*=============== CHANGE BACKGROUND HEADER ===============*/
 function scrollHeader() {
   const header = document.getElementById("header");
-  // When the scroll is greater than 50 viewport height, add the scroll-header class to the header tag
   if (this.scrollY >= 50) header.classList.add("scroll-header");
   else header.classList.remove("scroll-header");
 }
 window.addEventListener("scroll", scrollHeader);
 
-/*=============== SERVICES MODAL ===============*/
-// Get the modal
-const modalViews = document.querySelectorAll(".services__modal"),
-  modalBtns = document.querySelectorAll(".services__button"),
-  modalClose = document.querySelectorAll(".services__modal-close");
-
-// When the user clicks on the button, open the modal
-let modal = function (modalClick) {
-  modalViews[modalClick].classList.add("active-modal");
-};
-
-modalBtns.forEach((mb, i) => {
-  mb.addEventListener("click", () => {
-    modal(i);
-  });
-});
-
-modalClose.forEach((mc) => {
-  mc.addEventListener("click", () => {
-    modalViews.forEach((mv) => {
-      mv.classList.remove("active-modal");
-    });
-  });
-});
-
 /*=============== MIXITUP FILTER PORTFOLIO ===============*/
-
 let mixer = mixitup(".work__container", {
   selectors: {
     target: ".work__card",
@@ -45,7 +27,6 @@ let mixer = mixitup(".work__container", {
 
 /* Link active work */
 const workLinks = document.querySelectorAll(".work__item");
-
 function activeWork(workLink) {
   workLinks.forEach((wl) => {
     wl.classList.remove("active-work");
@@ -59,40 +40,14 @@ workLinks.forEach((wl) => {
   });
 });
 
-/*=============== SWIPER TESTIMONIAL ===============*/
-
-let swiperTestimonial = new Swiper(".testimonial__container", {
-  spaceBetween: 24,
-  loop: true,
-  grabCursor: true,
-
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
-  },
-
-  breakpoints: {
-    576: {
-      slidesPerView: 2,
-    },
-    768: {
-      slidesPerView: 2,
-      spaceBetween: 48,
-    },
-  },
-});
-
 /*=============== SCROLL SECTIONS ACTIVE LINK ===============*/
-
 const sections = document.querySelectorAll("section[id]");
-
 function scrollActive() {
   const scrollY = window.pageYOffset;
-
   sections.forEach((current) => {
     const sectionHeight = current.offsetHeight,
-      sectionTop = current.offsetTop - 58,
-      sectionId = current.getAttribute("id");
+          sectionTop = current.offsetTop - 58,
+          sectionId = current.getAttribute("id");
 
     if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
       document
@@ -112,19 +67,18 @@ const themeButton = document.getElementById("theme-button");
 const lightTheme = "light-theme";
 const iconTheme = "bx-sun";
 
-// Previously selected topic (if user selected)
+// Previously selected theme (if user selected)
 const selectedTheme = localStorage.getItem("selected-theme");
 const selectedIcon = localStorage.getItem("selected-icon");
 
-// We obtain the current theme that the interface has by validating the light-theme class
+// Get current theme
 const getCurrentTheme = () =>
   document.body.classList.contains(lightTheme) ? "dark" : "light";
 const getCurrentIcon = () =>
   themeButton.classList.contains(iconTheme) ? "bx bx-moon" : "bx bx-sun";
 
-// We validate if the user previously chose a topic
+// Validate if user previously chose a theme
 if (selectedTheme) {
-  // If the validation is fulfilled, we ask what the issue was to know if we activated or deactivated the light
   document.body.classList[selectedTheme === "dark" ? "add" : "remove"](
     lightTheme
   );
@@ -133,25 +87,173 @@ if (selectedTheme) {
   );
 }
 
-// Activate / deactivate the theme manually with the button
+// Activate/deactivate theme with button
 themeButton.addEventListener("click", () => {
-  // Add or remove the light / icon theme
   document.body.classList.toggle(lightTheme);
   themeButton.classList.toggle(iconTheme);
-  // We save the theme and the current icon that the user chose
   localStorage.setItem("selected-theme", getCurrentTheme());
   localStorage.setItem("selected-icon", getCurrentIcon());
 });
 
-/*=============== SCROLL REVEAL ANIMATION ===============*/
-const sr = ScrollReveal({
-  origin: "top",
-  distance: "60px",
-  duration: 2500,
-  delay: 400,
-  reset: true,
+/*=============== CONTACT FORM FUNCTIONALITY ===============*/
+document.addEventListener('DOMContentLoaded', function() {
+  const contactForm = document.getElementById('contact-form');
+  
+  if (contactForm) {
+    contactForm.addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      const name = document.getElementById('name').value;
+      const email = document.getElementById('email').value;
+      const message = document.getElementById('message').value;
+      
+      if (!name || !email || !message) {
+        showToast("Please fill all required fields", "error");
+        return;
+      }
+      
+      // Send email using mailto (for demo purposes)
+      // In production, integrate with EmailJS or another email service
+      const mailtoLink = `mailto:sandeepguptax2003@gmail.com?subject=Portfolio Contact from ${name}&body=${message}%0A%0AContact Email: ${email}`;
+      window.location.href = mailtoLink;
+      
+      // Show success message
+      showToast("Message sent successfully! Thank you for reaching out.", "success");
+      
+      // Reset the form
+      contactForm.reset();
+    });
+  }
+  
+  // Toast notification function
+  function showToast(message, type) {
+    if (typeof Toastify === 'function') {
+      Toastify({
+        text: message,
+        duration: 3000,
+        close: true,
+        gravity: "top",
+        position: "center",
+        backgroundColor: type === "success" ? "linear-gradient(to right, #9584E6, #7B68EE)" : "linear-gradient(to right, #ff5f6d, #ffc371)",
+        stopOnFocus: true
+      }).showToast();
+    } else {
+      alert(message);
+    }
+  }
+  
+  // Initialize particles.js if available
+  if (typeof particlesJS === 'function') {
+    particlesJS("particles-js", {
+      "particles": {
+        "number": {
+          "value": 80,
+          "density": {
+            "enable": true,
+            "value_area": 800
+          }
+        },
+        "color": {
+          "value": "#9584E6"
+        },
+        "shape": {
+          "type": "circle",
+          "stroke": {
+            "width": 0,
+            "color": "#000000"
+          },
+          "polygon": {
+            "nb_sides": 5
+          }
+        },
+        "opacity": {
+          "value": 0.5,
+          "random": false,
+          "anim": {
+            "enable": false,
+            "speed": 1,
+            "opacity_min": 0.1,
+            "sync": false
+          }
+        },
+        "size": {
+          "value": 3,
+          "random": true,
+          "anim": {
+            "enable": false,
+            "speed": 40,
+            "size_min": 0.1,
+            "sync": false
+          }
+        },
+        "line_linked": {
+          "enable": true,
+          "distance": 150,
+          "color": "#9584E6",
+          "opacity": 0.4,
+          "width": 1
+        },
+        "move": {
+          "enable": true,
+          "speed": 6,
+          "direction": "none",
+          "random": false,
+          "straight": false,
+          "out_mode": "out",
+          "bounce": false,
+          "attract": {
+            "enable": false,
+            "rotateX": 600,
+            "rotateY": 1200
+          }
+        }
+      },
+      "interactivity": {
+        "detect_on": "canvas",
+        "events": {
+          "onhover": {
+            "enable": true,
+            "mode": "repulse"
+          },
+          "onclick": {
+            "enable": true,
+            "mode": "push"
+          },
+          "resize": true
+        },
+        "modes": {
+          "grab": {
+            "distance": 400,
+            "line_linked": {
+              "opacity": 1
+            }
+          },
+          "bubble": {
+            "distance": 400,
+            "size": 40,
+            "duration": 2,
+            "opacity": 8,
+            "speed": 3
+          },
+          "repulse": {
+            "distance": 200,
+            "duration": 0.4
+          },
+          "push": {
+            "particles_nb": 4
+          },
+          "remove": {
+            "particles_nb": 2
+          }
+        }
+      },
+      "retina_detect": true
+    });
+  }
 });
 
+/*=============== SCROLL REVEAL ANIMATIONS ===============*/
+// Navigation menu
 sr.reveal(`.nav__menu`, {
   delay: 100,
   scale: 0.1,
@@ -159,76 +261,114 @@ sr.reveal(`.nav__menu`, {
   distance: "300px",
 });
 
-sr.reveal(`.home__data`);
+// Home section with more dynamic animations
+sr.reveal(`.home__data`, {
+  duration: 1800
+});
 sr.reveal(`.home__handle`, {
   delay: 100,
+  duration: 2000,
+  origin: "top"
+});
+sr.reveal(`.home__social`, {
+  delay: 200,
+  origin: "left",
+  distance: "80px",
+});
+sr.reveal(`.home__scroll`, {
+  delay: 200,
+  origin: "right",
+  distance: "80px",
 });
 
-sr.reveal(`.home__social, .home__scroll`, {
-  delay: 100,
-  origin: "bottom",
-});
-
+// About section with directional animations
 sr.reveal(`.about__img`, {
   delay: 100,
   origin: "left",
   scale: 0.9,
-  distance: "30px",
+  distance: "50px",
+  duration: 1800
 });
-
-sr.reveal(`.about__data, .about__description, .about__button-contact`, {
+sr.reveal(`.about__data`, {
   delay: 100,
   scale: 0.9,
   origin: "right",
-  distance: "30px",
+  distance: "50px",
+  duration: 1800
+});
+sr.reveal(`.about__box`, {
+  delay: 300,
+  scale: 0.8,
+  origin: "bottom",
+  distance: "40px",
+  interval: 100
 });
 
+// Experience section with staggered animations
+sr.reveal(`.experience__content`, {
+  delay: 100,
+  scale: 0.9,
+  origin: "bottom",
+  distance: "50px",
+  interval: 200
+});
+
+// Skills section with staggered animations
 sr.reveal(`.skills__content`, {
   delay: 100,
   scale: 0.9,
   origin: "bottom",
-  distance: "30px",
+  distance: "50px",
+  interval: 200
 });
 
-sr.reveal(`.services__title, services__button`, {
+// Work section with cascade animations
+sr.reveal(`.work__card`, {
+  delay: 100,
+  scale: 0.85,
+  origin: "bottom",
+  distance: "50px",
+  interval: 150
+});
+
+// Certifications section with cascade animations
+sr.reveal(`.certifications__card`, {
+  delay: 100,
+  scale: 0.9,
+  origin: "bottom",
+  distance: "50px",
+  interval: 150,
+});
+
+// Contact section with opposing direction animations
+sr.reveal(`.contact__info, .contact__title-info`, {
+  delay: 100,
+  scale: 0.9,
+  origin: "left",
+  distance: "50px",
+});
+sr.reveal(`.contact__form, .contact__title-form`, {
+  delay: 100,
+  scale: 0.9,
+  origin: "right",
+  distance: "50px",
+});
+
+// Footer
+sr.reveal(`.footer__title`, {
   delay: 100,
   scale: 0.9,
   origin: "top",
   distance: "30px",
 });
-
-sr.reveal(`.work__card`, {
-  delay: 100,
-  scale: 0.9,
+sr.reveal(`.footer__list`, {
+  delay: 200,
+  origin: "bottom",
+  distance: "40px",
+});
+sr.reveal(`.footer__social`, {
+  delay: 300,
+  scale: 0.8,
   origin: "bottom",
   distance: "30px",
 });
-
-sr.reveal(`.testimonial__container`, {
-  delay: 100,
-  scale: 0.9,
-  origin: "bottom",
-  distance: "30px",
-});
-
-sr.reveal(`.contact__info, .contact__title-info`, {
-  delay: 100,
-  scale: 0.9,
-  origin: "left",
-  distance: "30px",
-});
-
-sr.reveal(`.contact__form, .contact__title-form`, {
-  delay: 100,
-  scale: 0.9,
-  origin: "right",
-  distance: "30px",
-});
-
-sr.reveal(`.footer, footer__container`, {
-  delay: 100,
-  scale: 0.9,
-  origin: "bottom",
-  distance: "30px",
-});
-

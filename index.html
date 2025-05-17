@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!--=============== FAVICON ===============-->
+    <meta name="description" content="Sandeep Gupta - Node.js Developer specializing in backend architecture and full-stack web development">
+    
+    <!-- FAVICON -->
     <link rel="apple-touch-icon" sizes="180x180" href="assets/favicons/favicon.jpeg">
     <link rel="icon" type="image/png" sizes="32x32" href="assets/favicons/favicon.jpeg">
     <link rel="icon" type="image/png" sizes="16x16" href="assets/favicons/favicon.jpeg">
@@ -16,84 +16,108 @@
     <meta name="msapplication-config" content="assets/favicons/browserconfig.xml">
     <meta name="theme-color" content="#a789d4">
 
-    <!--=============== BOXICONS ===============-->
+    <!-- BOXICONS -->
     <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
 
-    <!--=============== SWIPER CSS ===============-->
+    <!-- SWIPER CSS -->
     <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+    
+    <!-- PARTICLES JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
+    
+    <!-- TOASTIFY JS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastify-js/1.12.0/toastify.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastify-js/1.12.0/toastify.min.js"></script>
+    
+    <!-- EMAIL JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/emailjs-com/3.2.0/email.min.js"></script>
 
-    <!--=============== CSS ===============-->
+    <!-- CSS -->
     <link rel="stylesheet" href="assets/css/styles.css">
 
-    <title> Sandeep Gupta Portfolio</title>
+    <title>Sandeep Gupta | Portfolio</title>
 </head>
 
 <body>
-    <!--=============== HEADER ===============-->
+    <!-- HEADER -->
     <header class="header" id="header">
+        <!-- Particles background for navbar -->
+        <div id="particles-js" class="particles-container"></div>
+        
         <nav class="nav container">
             <a href="#" class="nav__logo">Sandeep Gupta</a>
 
             <div class="nav__menu">
                 <ul class="nav__list">
-                    <li class="nav__item ">
+                    <li class="nav__item">
                         <a href="#home" class="nav__link">
                             <i class='bx bx-home'></i>
+                            <span class="nav__tooltip">Home</span>
                         </a>
                     </li>
-
-                    <li class="nav__item ">
+                    <li class="nav__item">
                         <a href="#about" class="nav__link">
                             <i class='bx bx-user'></i>
+                            <span class="nav__tooltip">About</span>
                         </a>
                     </li>
-
+                    <li class="nav__item">
+                        <a href="#experience" class="nav__link">
+                            <i class='bx bx-briefcase'></i>
+                            <span class="nav__tooltip">Experience</span>
+                        </a>
+                    </li>
                     <li class="nav__item">
                         <a href="#skills" class="nav__link">
                             <i class='bx bx-book'></i>
+                            <span class="nav__tooltip">Skills</span>
                         </a>
                     </li>
-
                     <li class="nav__item">
                         <a href="#work" class="nav__link">
                             <i class='bx bx-briefcase-alt-2'></i>
+                            <span class="nav__tooltip">Projects</span>
                         </a>
                     </li>
-
+                    <li class="nav__item">
+                        <a href="#certifications" class="nav__link">
+                            <i class='bx bx-medal'></i>
+                            <span class="nav__tooltip">Certifications</span>
+                        </a>
+                    </li>
                     <li class="nav__item">
                         <a href="#contact" class="nav__link">
                             <i class='bx bx-message-square-dots'></i>
+                            <span class="nav__tooltip">Contact</span>
                         </a>
                     </li>
                 </ul>
             </div>
 
-            <!--=============== theme change button ===============-->
+            <!-- Theme change button -->
             <i class='bx bx-moon change-theme change-theme-button' id="theme-button"></i>
-
         </nav>
     </header>
 
-    <!--=============== MAIN ===============-->
+    <!-- MAIN -->
     <main class="main">
-        <!--=============== HOME ===============-->
+        <!-- HOME -->
         <section class="home section" id="home">
             <div class="home__container container grid">
                 <div class="home__data">
                     <span class="home__greeting">Hello, I'm</span>
                     <h1 class="home__name">Sandeep Gupta</h1>
-                    <img src="https://readme-typing-svg.herokuapp.com/?lines=Full+Stack+Web+Developer;Back-end+Developer;Front-end+Developer&color=9584E6&center=true" />
+                    <img src="https://readme-typing-svg.herokuapp.com/?lines=Full+Stack+Web+Developer;Back-end+Developer;Front-end+Developer&color=9584E6&center=true" alt="Developer roles" />
                     <div class="home__button">
                         <a download="" href="assets/pdf/Sandeep-Gupta-Resume.pdf" class="button button--ghost">
                             Download CV
                         </a>
-
                         <a href="#about" class="button">About</a>
                     </div>
                 </div>
 
                 <div class="home__handle">
-                    <img src="assets/img/My-Personal-Image.png" alt="" class="home__img">
+                    <img src="assets/img/My-Personal-Image.png" alt="Sandeep Gupta" class="home__img">
                 </div>
 
                 <div class="home__social">
@@ -102,9 +126,6 @@
                     </a>
                     <a href="https://www.linkedin.com/in/sandeep-gupta-a1b679263/" target="_blank" class="home__social-link">
                         <i class='bx bxl-linkedin'></i>
-                    </a>
-                    <a href="https://twitter.com/sandeepx2003" target="_blank" class="home__social-link">
-                        <i class='bx bxl-twitter'></i>
                     </a>
                 </div>
 
@@ -115,20 +136,20 @@
             </div>
         </section>
 
-        <!--=============== ABOUT ===============-->
+        <!-- ABOUT -->
         <section class="about section" id="about">
             <span class="section__subtitle">My Intro</span>
             <h2 class="section__title">About Me</h2>
 
             <div class="about__container container grid">
-                <img src="assets/img/My-Personal-Image.png" alt="" class="about__img">
+                <img src="assets/img/My-Personal-Image.png" alt="Sandeep Gupta" class="about__img">
 
                 <div class="about__data">
                     <div class="about__info">
                         <div class="about__box">
                             <i class='bx bx-award about__icon'></i>
                             <h3 class="about__title">Experience</h3>
-                            <span class="about__subtitle">Fresher</span>
+                            <span class="about__subtitle">1+ Years</span>
                         </div>
                         <div class="about__box">
                             <i class='bx bx-briefcase-alt about__icon'></i>
@@ -138,7 +159,7 @@
                     </div>
 
                     <p class="about__description">
-                        Enthusiastic Full Stack Web Developer with a passion for developing scalable web applications and working across the full stack. Seeking to work in an environment that can encourage me to succeed and grow both personally and professionally to utilize skills and knowledge.
+                        Dedicated Node.js Developer with experience in backend architecture and full-stack web development. Skilled in building robust server-side applications, RESTful APIs, and database management systems.
                     </p>
 
                     <a href="assets/pdf/Sandeep-Gupta-Resume.pdf" target="_blank" class="button about__button-contact">View CV</a>
@@ -146,7 +167,45 @@
             </div>
         </section>
 
-        <!--=============== SKILLS ===============-->
+        <!-- EXPERIENCE -->
+        <section class="experience section" id="experience">
+            <span class="section__subtitle">My Journey</span>
+            <h2 class="section__title">Work Experience</h2>
+
+            <div class="experience__container container grid">
+                <div class="experience__content">
+                    <h3 class="experience__title">Software Development Engineer - 1</h3>
+                    <span class="experience__subtitle">ACREDGE LANDWORKS PVT. LTD. | Remote</span>
+                    <span class="experience__date">
+                        <i class='bx bx-calendar'></i> April 2025 - Present
+                    </span>
+                    <div class="experience__description">
+                        <ul class="experience__list">
+                            <li><i class='bx bx-badge-check'></i> Design and implement robust, scalable server-side applications</li>
+                            <li><i class='bx bx-badge-check'></i> Develop RESTful APIs with authentication protocols like OAuth and JWT</li>
+                            <li><i class='bx bx-badge-check'></i> Manage database systems ensuring data integrity and security</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="experience__content">
+                    <h3 class="experience__title">Backend Development Intern</h3>
+                    <span class="experience__subtitle">ACREDGE LANDWORKS PVT. LTD. | Remote</span>
+                    <span class="experience__date">
+                        <i class='bx bx-calendar'></i> October 2024 - March 2022
+                    </span>
+                    <div class="experience__description">
+                        <ul class="experience__list">
+                            <li><i class='bx bx-badge-check'></i> Contributed to system architecture design and development</li>
+                            <li><i class='bx bx-badge-check'></i> Implemented RESTful APIs for seamless data exchange</li>
+                            <li><i class='bx bx-badge-check'></i> Created and optimized database queries for enhanced performance</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SKILLS -->
         <section class="skills section" id="skills">
             <span class="section__subtitle">My Abilities</span>
             <h2 class="section__title">My Expertise</h2>
@@ -154,204 +213,249 @@
             <div class="skills__container container grid">
                 <div class="skills__content">
                     <h3 class="skills__title">Frontend Development</h3>
-
                     <div class="skills__box">
                         <div class="skills__group">
                             <div class="skills__data">
                                 <i class='bx bxs-badge-check'></i>
-
                                 <div>
-                                    <h3 class="skills__name">HTML</h3>
-                                    
+                                    <h3 class="skills__name">JavaScript</h3>
                                 </div>
                             </div>
-
                             <div class="skills__data">
                                 <i class='bx bxs-badge-check'></i>
-
                                 <div>
-                                    <h3 class="skills__name">CSS</h3>
-                                    
+                                    <h3 class="skills__name">React</h3>
                                 </div>
                             </div>
-
                             <div class="skills__data">
                                 <i class='bx bxs-badge-check'></i>
-
                                 <div>
-                                    <h3 class="skills__name">Javascript</h3>
-                                    
+                                    <h3 class="skills__name">HTML/CSS</h3>
                                 </div>
                             </div>
-
                         </div>
                         <div class="skills__group">
                             <div class="skills__data">
                                 <i class='bx bxs-badge-check'></i>
-
                                 <div>
-                                    <h3 class="skills__name">React</h3>
-                                    
+                                    <h3 class="skills__name">Redux</h3>
                                 </div>
                             </div>
-
                             <div class="skills__data">
                                 <i class='bx bxs-badge-check'></i>
-
                                 <div>
-                                    <h3 class="skills__name">BootStrap</h3>
-                                    
+                                    <h3 class="skills__name">Responsive Design</h3>
                                 </div>
                             </div>
-
                             <div class="skills__data">
                                 <i class='bx bxs-badge-check'></i>
-
                                 <div>
-                                    <h3 class="skills__name">Angular</h3>
-                                    
+                                    <h3 class="skills__name">JWT</h3>
                                 </div>
                             </div>
-
                         </div>
                     </div>
                 </div>
 
                 <div class="skills__content">
                     <h3 class="skills__title">Backend Development</h3>
-
                     <div class="skills__box">
                         <div class="skills__group">
                             <div class="skills__data">
                                 <i class='bx bxs-badge-check'></i>
-
                                 <div>
-                                    <h3 class="skills__name">Python</h3>
-                                    
+                                    <h3 class="skills__name">Node.js</h3>
                                 </div>
                             </div>
-
                             <div class="skills__data">
                                 <i class='bx bxs-badge-check'></i>
-
                                 <div>
-                                    <h3 class="skills__name">ExpressJS</h3>
-                                    
+                                    <h3 class="skills__name">Express.js</h3>
                                 </div>
                             </div>
-
                             <div class="skills__data">
                                 <i class='bx bxs-badge-check'></i>
-
                                 <div>
-                                    <h3 class="skills__name">MySQL</h3>
-                                    
+                                    <h3 class="skills__name">MongoDB</h3>
                                 </div>
                             </div>
-
                         </div>
                         <div class="skills__group">
                             <div class="skills__data">
                                 <i class='bx bxs-badge-check'></i>
-
                                 <div>
-                                    <h3 class="skills__name">MongoDB</h3>
-                                    
+                                    <h3 class="skills__name">MySQL</h3>
                                 </div>
                             </div>
-
                             <div class="skills__data">
                                 <i class='bx bxs-badge-check'></i>
-
                                 <div>
-                                    <h3 class="skills__name">WebSockets</h3>
-                                    
+                                    <h3 class="skills__name">RESTful APIs</h3>
                                 </div>
                             </div>
-
                             <div class="skills__data">
                                 <i class='bx bxs-badge-check'></i>
-
                                 <div>
-                                    <h3 class="skills__name">NodeJS</h3>
-                                    
+                                    <h3 class="skills__name">Firebase</h3>
                                 </div>
                             </div>
-
                         </div>
                     </div>
                 </div>
+                
+                <div class="skills__content">
+                    <h3 class="skills__title">API Integration & Tools</h3>
+                    <div class="skills__box">
+                        <div class="skills__group">
+                            <div class="skills__data">
+                                <i class='bx bxs-badge-check'></i>
+                                <div>
+                                    <h3 class="skills__name">OpenAI</h3>
+                                </div>
+                            </div>
+                            <div class="skills__data">
+                                <i class='bx bxs-badge-check'></i>
+                                <div>
+                                    <h3 class="skills__name">Google Maps</h3>
+                                </div>
+                            </div>
+                            <div class="skills__data">
+                                <i class='bx bxs-badge-check'></i>
+                                <div>
+                                    <h3 class="skills__name">Nodemailer</h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="skills__group">
+                            <div class="skills__data">
+                                <i class='bx bxs-badge-check'></i>
+                                <div>
+                                    <h3 class="skills__name">Pinecone</h3>
+                                </div>
+                            </div>
+                            <div class="skills__data">
+                                <i class='bx bxs-badge-check'></i>
+                                <div>
+                                    <h3 class="skills__name">Algolia</h3>
+                                </div>
+                            </div>
+                            <div class="skills__data">
+                                <i class='bx bxs-badge-check'></i>
+                                <div>
+                                    <h3 class="skills__name">Helmet/Security</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
 
-       
-
-        <!--=============== WORKS ===============-->
+        <!-- PORTFOLIO -->
         <section class="work section" id="work">
             <span class="section__subtitle">My Portfolio</span>
             <h2 class="section__title">Recent Works</h2>
 
             <div class="work__container container grid">
                 <div class="work__card mix web">
-                    <img src="assets/img/Bookish treasure.png" alt="" class="work__img">
-
+                    <img src="assets/img/Bookish treasure.png" alt="Bookish Treasure Project" class="work__img">
                     <h3 class="work__title">Bookish Treasure</h3>
-
-                    <a href="https://bookish-treasure.netlify.app/" class="work__button">
-                        Live <i class='bx bx-right-arrow work__icon'></i>
-                    </a>
-                    <a href="https://github.com/sandeepguptax2003/Bookish-Treasures" class="work__button">
-                        Code <i class='bx bx-right-arrow work__icon'></i>
-                    </a>
+                    <div class="work__buttons">
+                        <a href="https://bookish-treasure.netlify.app/" target="_blank" class="work__button">
+                            Live <i class='bx bx-right-arrow work__icon'></i>
+                        </a>
+                        <a href="https://github.com/sandeepguptax2003/Bookish-Treasures" target="_blank" class="work__button">
+                            Code <i class='bx bx-right-arrow work__icon'></i>
+                        </a>
+                    </div>
                 </div>
 
                 <div class="work__card mix movil">
-                    <img src="assets/img/healthconnect+.png" alt="" class="work__img">
-
+                    <img src="assets/img/healthconnect+.png" alt="Health Connect Plus Project" class="work__img">
                     <h3 class="work__title">Health Connect +</h3>
-
-                    <a href="https://healthconnectpluse.netlify.app/" class="work__button">
-                        Live <i class='bx bx-right-arrow work__icon'></i>
-                    </a>
-                    <a href="https://github.com/omkar231098/rough-support-2269" class="work__button">
-                        Code <i class='bx bx-right-arrow work__icon'></i>
-                    </a>
+                    <div class="work__buttons">
+                        <a href="https://healthconnectpluse.netlify.app/" target="_blank" class="work__button">
+                            Live <i class='bx bx-right-arrow work__icon'></i>
+                        </a>
+                        <a href="https://github.com/omkar231098/rough-support-2269" target="_blank" class="work__button">
+                            Code <i class='bx bx-right-arrow work__icon'></i>
+                        </a>
+                    </div>
                 </div>
 
                 <div class="work__card mix design">
-                    <img src="assets/img/ChatMate.png" alt="" class="work__img">
-
+                    <img src="assets/img/ChatMate.png" alt="Chat Mate Project" class="work__img">
                     <h3 class="work__title">Chat Mate</h3>
-
-                    <a href="https://merry-starburst-7c9544.netlify.app/" class="work__button">
-                        Live <i class='bx bx-right-arrow work__icon'></i>
-                    </a>
-                    <a href="https://github.com/sandeepguptax2003/deafening-cable-214" class="work__button">
-                        Code <i class='bx bx-right-arrow work__icon'></i>
-                    </a>
+                    <div class="work__buttons">
+                        <a href="https://merry-starburst-7c9544.netlify.app/" target="_blank" class="work__button">
+                            Live <i class='bx bx-right-arrow work__icon'></i>
+                        </a>
+                        <a href="https://github.com/sandeepguptax2003/deafening-cable-214" target="_blank" class="work__button">
+                            Code <i class='bx bx-right-arrow work__icon'></i>
+                        </a>
+                    </div>
                 </div>
 
                 <div class="work__card mix web">
-                    <img src="assets/img/junglebuy.png" alt="" class="work__img">
-
+                    <img src="assets/img/junglebuy.png" alt="Jungle Buy Project" class="work__img">
                     <h3 class="work__title">Jungle Buy</h3>
-
-                    <a href="https://jungle-buy-amazon-clone.vercel.app/" class="work__button">
-                        Live <i class='bx bx-right-arrow work__icon'></i>
-                    </a>
-                    <a href="https://github.com/V-sukumar/agreeable-transport-9100" class="work__button">
-                        Code <i class='bx bx-right-arrow work__icon'></i>
-                    </a>
+                    <div class="work__buttons">
+                        <a href="https://jungle-buy-amazon-clone.vercel.app/" target="_blank" class="work__button">
+                            Live <i class='bx bx-right-arrow work__icon'></i>
+                        </a>
+                        <a href="https://github.com/V-sukumar/agreeable-transport-9100" target="_blank" class="work__button">
+                            Code <i class='bx bx-right-arrow work__icon'></i>
+                        </a>
+                    </div>
                 </div>
-
             </div>
         </section>
 
-       
+        <!-- CERTIFICATIONS -->
+        <section class="certifications section" id="certifications">
+            <span class="section__subtitle">My Credentials</span>
+            <h2 class="section__title">Certifications</h2>
 
-        <!--=============== CONTACT ===============-->
+            <div class="certifications__container container grid">
+                <div class="certifications__card">
+                    <div class="certifications__icon">
+                        <i class='bx bx-badge-check'></i>
+                    </div>
+                    <h3 class="certifications__title">Prompt Engineering</h3>
+                    <p class="certifications__organization">Masai School</p>
+                    <a href="https://drive.google.com/file/d/1LeBFUvFT2KbHcoRtang5YmqwfV6fWzKf/view?usp=sharing" target="_blank" class="certifications__button">
+                        View Credential <i class='bx bx-right-arrow certifications__button-icon'></i>
+                    </a>
+                </div>
+                
+                <div class="certifications__card">
+                    <div class="certifications__icon">
+                        <i class='bx bx-badge-check'></i>
+                    </div>
+                    <h3 class="certifications__title">Assessment Assistantship Program</h3>
+                    <p class="certifications__organization">Masai School</p>
+                    <a href="https://drive.google.com/file/d/1lRVc91h7LIjLEp5T9wa5Qqrglm_SwepE/view?usp=sharing" target="_blank" class="certifications__button">
+                        View Credential <i class='bx bx-right-arrow certifications__button-icon'></i>
+                    </a>
+                </div>
+                
+                <div class="certifications__card">
+                    <div class="certifications__icon">
+                        <i class='bx bx-badge-check'></i>
+                    </div>
+                    <h3 class="certifications__title">Problem Solving</h3>
+                    <p class="certifications__organization">HackerRank</p>
+                    <a href="https://www.hackerrank.com/certificates/72882819d648" target="_blank" class="certifications__button">
+                        View Credential <i class='bx bx-right-arrow certifications__button-icon'></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACT -->
         <section class="contact section" id="contact">
-            <sapn class="section__subtitle">Get in touch</sapn>
-            <h3 class="section__title">Contact Me</h3>
+            <span class="section__subtitle">Get in touch</span>
+            <h2 class="section__title">Contact Me</h2>
 
             <div class="contact__container container grid">
                 <div class="contact__content">
@@ -362,28 +466,15 @@
                             <i class='bx bx-mail-send contact__card-icon'></i>
                             <h3 class="contact__card-title">Email</h3>
                             <span class="contact__card-data">sandeepguptax2003@gmail.com</span>
-
-                            <a href="mailto:example@domain.com" target="_blank" class="contact__button">
-                                Write Me <i class='bx bx-right-arrow contact__button-icon'></i>
-                            </a>
-                        </div>
-
-                        <div class="contact__card">
-                            <i class='bx bxl-whatsapp contact__card-icon'></i>
-                            <h3 class="contact__card-title">Whatsapp</h3>
-                            <span class="contact__card-data">+91 7847940928</span>
-
-                            <a href="https://api.whatsapp.com/send?phone=+917847940928&text=Hey there!" target="_blank"
-                                class="contact__button">
+                            <a href="mailto:sandeepguptax2003@gmail.com" target="_blank" class="contact__button">
                                 Write Me <i class='bx bx-right-arrow contact__button-icon'></i>
                             </a>
                         </div>
 
                         <div class="contact__card">
                             <i class='bx bxl-linkedin contact__card-icon'></i>
-                            <h3 class="contact__card-title">linkedin</h3>
+                            <h3 class="contact__card-title">LinkedIn</h3>
                             <span class="contact__card-data">Sandeep Gupta</span>
-
                             <a href="https://www.linkedin.com/in/sandeep-gupta-a1b679263/" target="_blank" class="contact__button">
                                 Write Me <i class='bx bx-right-arrow contact__button-icon'></i>
                             </a>
@@ -393,50 +484,45 @@
 
                 <div class="contact__content">
                     <h3 class="contact__title contact__title-form">Write Me your Message</h3>
-
-                    <form action="" class="contact__form">
+                    <form id="contact-form" class="contact__form">
                         <div class="contact__form-div">
-                            <label for="" class="contact__form-tag">Name</label>
-                            <input type="text" placeholder="Enter name" class="contact__form-input">
+                            <label for="name" class="contact__form-tag">Name</label>
+                            <input type="text" id="name" name="name" placeholder="Enter name" class="contact__form-input" required>
                         </div>
 
                         <div class="contact__form-div">
-                            <label for="" class="contact__form-tag">Mail</label>
-                            <input type="text" placeholder="Enter email" class="contact__form-input">
+                            <label for="email" class="contact__form-tag">Mail</label>
+                            <input type="email" id="email" name="email" placeholder="Enter email" class="contact__form-input" required>
                         </div>
 
                         <div class="contact__form-div contact__form-area">
-                            <label for="" class="contact__form-tag">Message</label>
-                            <textarea name="" id="" cols="30" rows="10" placeholder="Write your Message"
-                                class="contact__form-input "></textarea>
+                            <label for="message" class="contact__form-tag">Message</label>
+                            <textarea name="message" id="message" cols="30" rows="10" placeholder="Write your Message" class="contact__form-input" required></textarea>
                         </div>
 
-
-                        <button class="button">
+                        <button type="submit" class="button">
                             Send Message
                         </button>
                     </form>
-
                 </div>
-
+            </div>
         </section>
     </main>
 
-
-    
-
-    <!--=============== FOOTER ===============-->
+    <!-- FOOTER -->
     <footer class="footer">
         <div class="footer__container container">
             <h1 class="footer__title">Sandeep Gupta</h1>
 
             <ul class="footer__list">
-
                 <li class="footer__item">
                     <a href="#" class="footer__link">Home</a>
                 </li>
                 <li class="footer__item">
                     <a href="#about" class="footer__link">About</a>
+                </li>
+                <li class="footer__item">
+                    <a href="#experience" class="footer__link">Experience</a>
                 </li>
                 <li class="footer__item">
                     <a href="#skills" class="footer__link">Skills</a>
@@ -445,16 +531,14 @@
                     <a href="#work" class="footer__link">Work</a>
                 </li>
                 <li class="footer__item">
+                    <a href="#certifications" class="footer__link">Certifications</a>
+                </li>
+                <li class="footer__item">
                     <a href="#contact" class="footer__link">Contact</a>
                 </li>
             </ul>
 
             <ul class="footer__social">
-                <li class="footer__social-item">
-                    <a href="https://twitter.com/sandeepx2003" target="_blank" class="footer__social-link">
-                        <i class='bx bxl-twitter footer__social-icon'></i>
-                    </a>
-                </li>
                 <li class="footer__social-item">
                     <a href="https://www.linkedin.com/in/sandeep-gupta-a1b679263/" target="_blank" class="footer__social-link">
                         <i class='bx bxl-linkedin footer__social-icon'></i>
@@ -473,22 +557,169 @@
         </div>
     </footer>
 
-
-
-    <!--=============== SCROLLREVEAL ===============-->
-
-    <!-- <script src="assets/js/scrollreveal.min.js"></script> -->
+    <!-- SCROLLREVEAL -->
     <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
 
-    <!--=============== SWIPER JS ===============-->
+    <!-- SWIPER JS -->
     <script src="assets/js/swiper-bundle.min.js"></script>
 
-    <!--=============== MIXITUP FILTER ===============-->
+    <!-- MIXITUP FILTER -->
     <script src="assets/js/mixitup.min.js"></script>
 
-    <!--=============== MAIN JS ===============-->
+    <!-- MAIN JS -->
     <script src="assets/js/main.js"></script>
     
+    <!-- Custom JS for particles and email functionality -->
+    <script>
+        // Initialize particles.js
+        document.addEventListener('DOMContentLoaded', function() {
+            particlesJS("particles-js", {
+                "particles": {
+                    "number": {
+                        "value": 80,
+                        "density": {
+                            "enable": true,
+                            "value_area": 800
+                        }
+                    },
+                    "color": {
+                        "value": "#9584E6"
+                    },
+                    "shape": {
+                        "type": "circle",
+                        "stroke": {
+                            "width": 0,
+                            "color": "#000000"
+                        },
+                        "polygon": {
+                            "nb_sides": 5
+                        }
+                    },
+                    "opacity": {
+                        "value": 0.5,
+                        "random": false,
+                        "anim": {
+                            "enable": false,
+                            "speed": 1,
+                            "opacity_min": 0.1,
+                            "sync": false
+                        }
+                    },
+                    "size": {
+                        "value": 3,
+                        "random": true,
+                        "anim": {
+                            "enable": false,
+                            "speed": 40,
+                            "size_min": 0.1,
+                            "sync": false
+                        }
+                    },
+                    "line_linked": {
+                        "enable": true,
+                        "distance": 150,
+                        "color": "#9584E6",
+                        "opacity": 0.4,
+                        "width": 1
+                    },
+                    "move": {
+                        "enable": true,
+                        "speed": 6,
+                        "direction": "none",
+                        "random": false,
+                        "straight": false,
+                        "out_mode": "out",
+                        "bounce": false,
+                        "attract": {
+                            "enable": false,
+                            "rotateX": 600,
+                            "rotateY": 1200
+                        }
+                    }
+                },
+                "interactivity": {
+                    "detect_on": "canvas",
+                    "events": {
+                        "onhover": {
+                            "enable": true,
+                            "mode": "repulse"
+                        },
+                        "onclick": {
+                            "enable": true,
+                            "mode": "push"
+                        },
+                        "resize": true
+                    },
+                    "modes": {
+                        "grab": {
+                            "distance": 400,
+                            "line_linked": {
+                                "opacity": 1
+                            }
+                        },
+                        "bubble": {
+                            "distance": 400,
+                            "size": 40,
+                            "duration": 2,
+                            "opacity": 8,
+                            "speed": 3
+                        },
+                        "repulse": {
+                            "distance": 200,
+                            "duration": 0.4
+                        },
+                        "push": {
+                            "particles_nb": 4
+                        },
+                        "remove": {
+                            "particles_nb": 2
+                        }
+                    }
+                },
+                "retina_detect": true
+            });
+        });
+        
+        // Initialize EmailJS
+        (function() {
+            emailjs.init("YOUR_USER_ID"); // Replace with your EmailJS user ID
+        })();
+        
+        // Contact form submission
+        document.addEventListener('DOMContentLoaded', function() {
+            const contactForm = document.getElementById('contact-form');
+            
+            if (contactForm) {
+                contactForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    
+                    const name = document.getElementById('name').value;
+                    const email = document.getElementById('email').value;
+                    const message = document.getElementById('message').value;
+                    
+                    // Simple email sending using mailto for demo purposes
+                    // In production, use EmailJS or another service
+                    const mailtoLink = `mailto:sandeepguptax2003@gmail.com?subject=Portfolio Contact from ${name}&body=${message}%0A%0AContact Email: ${email}`;
+                    
+                    // Open email client
+                    window.location.href = mailtoLink;
+                    
+                    // Show success message
+                    Toastify({
+                        text: "Message sent successfully! Thank you for reaching out.",
+                        duration: 3000,
+                        close: true,
+                        gravity: "top",
+                        position: "center",
+                        backgroundColor: "linear-gradient(to right, #9584E6, #7B68EE)",
+                        stopOnFocus: true
+                    }).showToast();
+                    
+                    // Reset the form
+                    contactForm.reset();
+                });
+            }
+        });
+    </script>
 </body>
-
 </html>
