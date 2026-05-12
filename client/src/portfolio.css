@@ -1285,6 +1285,15 @@
   margin-bottom: 0.75rem;
 }
 
+.cert-cin-badge-logo {
+  width: 64px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  object-fit: contain;
+  filter: brightness(0) invert(0.95);
+}
+
 .cert-cin-title {
   font-size: 0.95rem;
   font-weight: 700;

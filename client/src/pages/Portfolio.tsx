@@ -8,6 +8,7 @@ import bookishImg from '@assets/Bookish_treasure_1771954928160.png';
 import chatmateImg from '@assets/ChatMate_1771954928161.png';
 import healthImg from '@assets/healthconnect+_1771954928162.png';
 import jungleImg from '@assets/junglebuy_1771954928163.png';
+import awsLogo from '@assets/aws logo.svg';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -36,9 +37,9 @@ const BUILDING_PROJECTS = [
 ];
 
 const CERTIFICATIONS = [
+  { title: 'AWS 10,000 AIdeas Competition 2025 - Semifinalist', org: 'AWS', link: 'https://builder.aws.com/content/3B84yzRMPmtfrqTZ1WpfN50Jitg/aideas-cortex-ai-the-ai-powered-meeting-intelligence-platform', iconSrc: awsLogo, iconAlt: 'AWS logo' },
   { title: 'Prompt Engineering', org: 'Masai School', link: 'https://drive.google.com/file/d/1LeBFUvFT2KbHcoRtang5YmqwfV6fWzKf/view?usp=sharing', icon: '🤖' },
   { title: 'Assessment Assistantship Program', org: 'Masai School', link: 'https://drive.google.com/file/d/1lRVc91h7LIjLEp5T9wa5Qqrglm_SwepE/view?usp=sharing', icon: '🎓' },
-  { title: 'Problem Solving', org: 'HackerRank', link: 'https://www.hackerrank.com/certificates/72882819d648', icon: '🧩' },
 ];
 
 const EXPERIENCE = [
@@ -601,9 +602,9 @@ export default function Portfolio() {
               🚀 Engineering production-grade systems from zero to deployment. AI-augmented backends, bulletproof APIs, and battle-tested architecture that scales across cloud, mobile & web.
             </p>
             <div className="hero-actions">
-              <a href="/Sandeep-Gupta-Resume.pdf" download className="cin-btn cin-btn-primary" data-testid="button-download-cv">
+              <a href="/Sandeep-Gupta-Resume.pdf" download="Sandeep-Gupta-Resume.pdf" className="cin-btn cin-btn-primary" data-testid="button-download-cv">
                 <span className="cin-btn-glint" />
-                📄 DOWNLOAD CV
+                📄 DOWNLOAD RESUME
               </a>
               <a href="#about" className="cin-btn cin-btn-ghost" onClick={(e) => { e.preventDefault(); document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' }); }} data-testid="button-about">
                 🔍 EXPLORE
@@ -791,7 +792,9 @@ export default function Portfolio() {
         <div className="cert-showcase">
           {CERTIFICATIONS.map((cert, i) => (
             <a href={cert.link} target="_blank" rel="noopener noreferrer" className="cert-cin-card stagger-in" key={i} data-testid={`card-cert-${i}`}>
-              <div className="cert-cin-badge">{cert.icon}</div>
+              <div className="cert-cin-badge">
+                {cert.iconSrc ? <img src={cert.iconSrc} alt={cert.iconAlt} className="cert-cin-badge-logo" /> : cert.icon}
+              </div>
               <h3 className="cert-cin-title">{cert.title}</h3>
               <span className="cert-cin-org">{cert.org}</span>
               <span className="cert-cin-action">🔗 VIEW CREDENTIAL →</span>
