@@ -673,7 +673,7 @@
 }
 
 @media (min-width: 768px) {
-  .about-immersive { grid-template-columns: auto 1fr; }
+  .about-immersive { grid-template-columns: auto minmax(0, 1fr); }
 }
 
 .about-img-cin-wrap {
@@ -727,7 +727,7 @@
 
 .about-metrics {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
   gap: 1.2rem;
   margin-bottom: 1.5rem;
 }

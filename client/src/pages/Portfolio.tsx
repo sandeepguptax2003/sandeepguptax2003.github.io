@@ -8,6 +8,7 @@ import bookishImg from '@assets/Bookish_treasure_1771954928160.png';
 import chatmateImg from '@assets/ChatMate_1771954928161.png';
 import healthImg from '@assets/healthconnect+_1771954928162.png';
 import jungleImg from '@assets/junglebuy_1771954928163.png';
+import salongoImg from '@assets/salongo-hero_1.jpg';
 import awsLogo from '@assets/aws logo.svg';
 
 gsap.registerPlugin(ScrollTrigger);
@@ -15,12 +16,12 @@ gsap.registerPlugin(ScrollTrigger);
 const HERO_TITLES = ['Developer 💻', 'Gamer 🎮', 'Adventurer 🏔️', 'Tech Enthusiast ⚡', 'AI Expert 🤖', 'Creator 🚀', 'Problem Solver 🧩', 'Builder 🔨'];
 
 const SKILLS = {
+  ai: { title: 'AI & LLM Engineering', icon: '🤖', items: ['OpenAI API', 'Anthropic Claude', 'Google Gemini', 'AWS Bedrock', 'Prompt Engineering', 'RAG', 'AI Agents', 'Function Calling', 'Embeddings', 'Pinecone', 'Vector Databases'] },
+  backend: { title: 'Backend Architecture', icon: '🔧', items: ['Node.js', 'Express.js', 'REST APIs', 'Microservices', 'System Design', 'API Security', 'JWT', 'Rate Limiting', 'WebSockets', 'Caching'] },
   frontend: { title: 'Frontend Development', icon: '⚡', items: ['JavaScript', 'TypeScript', 'React', 'Next.js', 'Redux', 'Tailwind CSS', 'Framer Motion', 'HTML/CSS'] },
-  backend: { title: 'Backend Architecture', icon: '🔧', items: ['Node.js', 'Express.js', 'MongoDB', 'MySQL', 'Redis', 'Elasticsearch', 'RESTful APIs', 'JWT'] },
-  ai: { title: 'AI & Intelligence', icon: '🤖', items: ['OpenAI API', 'Anthropic Claude', 'Google Gemini', 'Pinecone', 'AWS Bedrock', 'Algolia Search'] },
-  cloud: { title: 'Cloud & Infrastructure', icon: '☁️', items: ['AWS S3', 'AWS DynamoDB', 'AWS SES', 'AWS EventBridge', 'Firebase', 'Google Cloud'] },
-  integration: { title: 'Mobile & Integration', icon: '🔗', items: ['React Native', 'Google Maps', 'Twilio', 'Razorpay', 'Cashfree', 'Nodemailer', 'Slack API'] },
-  tools: { title: 'Tools & Platforms', icon: '🛠️', items: ['Git', 'GitHub', 'VS Code', 'Postman', 'Vercel', 'Netlify', 'Render', 'NPM'] },
+  databases: { title: 'Databases & Search', icon: '🗄️', items: ['MongoDB', 'PostgreSQL', 'MySQL', 'DynamoDB', 'Firestore', 'Redis', 'Elasticsearch', 'Algolia'] },
+  cloud: { title: 'Cloud & DevOps', icon: '☁️', items: ['AWS (S3, DynamoDB, SES, Bedrock)', 'Google Cloud', 'Firebase', 'Docker', 'CI/CD', 'GitHub Actions', 'Vercel', 'Render', 'Serverless'] },
+  integration: { title: 'Mobile & Integrations', icon: '🔗', items: ['React Native', 'Google Maps API', 'Razorpay', 'Stripe', 'Twilio', 'WhatsApp API', 'Slack API', 'Nodemailer', 'Chrome Extensions', 'Media Processing'] },
 };
 
 const PROJECTS = [
@@ -30,10 +31,25 @@ const PROJECTS = [
   { title: 'Jungle Buy', img: jungleImg, points: ['🛍️ Amazon-scale e-commerce clone with product categories', '🔎 Full search engine, cart & secure user authentication', '🔥 Firebase-powered backend with real-time state management'], live: 'https://jungle-buy-amazon-clone.vercel.app/', code: 'https://github.com/V-sukumar/agreeable-transport-9100', tech: ['React', 'Redux', 'Firebase'] },
 ];
 
-const BUILDING_PROJECTS = [
-  { title: 'BillFlow', subtitle: '💰 AI-Powered Billing & Cost Intelligence Platform', gradient: 'linear-gradient(135deg, #1a0533 0%, #0d1b2a 50%, #1b2838 100%)', emoji: '💰', points: ['📊 Unified billing dashboard — manage all subscriptions & invoices in one place in real-time', '🤖 AI-powered cost advisor with personalized recommendations to reduce spending', '📈 Smart analytics with spending trends, forecasts & budget optimization alerts', '🔔 Automated bill reminders, due-date tracking & payment scheduling', '💡 AI insights on cost-cutting strategies across cloud, SaaS & utility bills'], tech: ['Next.js', 'React', 'Framer Motion', 'Recharts', 'Zustand', 'Tailwind CSS'], status: 'FORGING' },
-  { title: 'Matguns', subtitle: '🎮 Competitive Esports & Skill-Based Gaming Arena', gradient: 'linear-gradient(135deg, #0a2e1a 0%, #0d1b2a 50%, #1a2a1a 100%)', emoji: '🎮', points: ['🏆 Play BGMI, Valorant, Free Fire & top titles — win real money with pure skills', '💸 100% safe & verified real-money tournaments with instant withdrawals', '👥 Built-in community hub for gamers, esports pros & content creators', '🎯 Leaderboards, rankings, team matchmaking & live tournament brackets', '🛡️ Anti-cheat verified, fully secure & fair competitive ecosystem'], tech: ['React Native', 'Firebase', 'Razorpay', 'React Navigation'], status: 'FORGING' },
-  { title: 'Cortex AI', subtitle: '🧠 AI Meeting Assistant & Autonomous Project Intelligence', gradient: 'linear-gradient(135deg, #1a1a33 0%, #0a1628 50%, #2a1a0a 100%)', emoji: '🧠', points: ['🎙️ Joins meetings via browser extension — listens, transcribes & takes action in real-time', '🎫 Auto-creates Jira/Notion tickets from meeting discussions instantly', '📊 Executive dashboard for employees & managers to track all tasks, deadlines & progress', '🔗 Connects Slack, Email, Jira, Notion — create & manage tickets from anywhere', '⏰ Smart reminders, auto-follow-ups & deadline alerts so nothing gets missed'], tech: ['AWS DynamoDB', 'AWS S3', 'AWS Bedrock', 'Express', 'Slack API', 'AWS SES'], status: 'FORGING' },
+interface BuildingProject {
+  title: string;
+  subtitle: string;
+  img?: string;
+  gradient: string;
+  emoji: string;
+  points: string[];
+  tech: string[];
+  status: 'LIVE' | 'SHIPPED' | 'FORGING';
+  live?: string;
+  code?: string;
+}
+
+const BUILDING_PROJECTS: BuildingProject[] = [
+  { title: 'SalonGo', subtitle: '✂️ 3-Sided Salon Booking Marketplace', img: salongoImg, gradient: 'linear-gradient(135deg, #2a1a0a 0%, #0d1b2a 50%, #1a2a1a 100%)', emoji: '✂️', points: ['🏗️ Co-founded & built the full platform — customer, partner & admin apps with a single Node.js API', '📅 Real-time salon discovery, instant booking, reschedule flows & verified reviews', '💳 Razorpay payments, partner wallets, cron-based settlements & PDF/QR invoicing', '📲 WhatsApp notifications (MSG91), coupon engine & fuzzy search', '🛡️ Hardened API — Helmet, sanitization, XSS protection, HPP & tiered rate limiting'], tech: ['Node.js', 'Express', 'Firebase', 'Firestore', 'Next.js', 'Razorpay', 'WhatsApp API'], status: 'LIVE', live: 'https://mysalongo.in' },
+  { title: 'Cortex AI', subtitle: '🧠 AI-Powered Meeting Intelligence Platform', gradient: 'linear-gradient(135deg, #1a1a33 0%, #0a1628 50%, #2a1a0a 100%)', emoji: '🧠', points: ['🎙️ Joins meetings via a Chrome Extension — captures live captions with optimized streaming & dedup', '🎫 Real-time AI action-item extraction from Zoom, Google Meet & Microsoft Teams', '🤖 AI chatbot with command execution for ticket creation, summaries & workflow automation', '🗄️ Scalable backend — single-table DynamoDB design, real-time processing, AWS deployment', '🏆 AWS 10,000 AIdeas 2025 Semifinalist'], tech: ['Claude', 'Node.js', 'Next.js', 'DynamoDB', 'AWS S3', 'AWS SES', 'Slack API'], status: 'SHIPPED', code: 'https://github.com/sandeepguptax2003/Cortex-AI-Backend' },
+  { title: 'Matguns', subtitle: '🎮 Android & iOS Esports Tournament App', gradient: 'linear-gradient(135deg, #0a2e1a 0%, #0d1b2a 50%, #1a2a1a 100%)', emoji: '🎮', points: ['📱 Native Android & iOS app (React Native) for competitive BGMI, Valorant & Free Fire tournaments', '🏆 Real-money, skill-based tournaments with instant Razorpay withdrawals', '👥 Community hub — leaderboards, rankings, team matchmaking & live brackets', '🛡️ Anti-cheat verified, fully secure & fair competitive ecosystem'], tech: ['React Native', 'Firebase', 'Razorpay', 'React Navigation'], status: 'FORGING' },
+  { title: 'Lead Shera', subtitle: '🎯 LinkedIn Outreach & Lead-Gen Automation', gradient: 'linear-gradient(135deg, #1a0533 0%, #0d1b2a 50%, #1b2838 100%)', emoji: '🎯', points: ['🤖 Automates LinkedIn lead generation with Playwright-driven scraping & Unipile integration', '✉️ AI-generated, sequenced outreach messaging with a smart follow-up queue', '📊 Campaign dashboard for tracking replies, connections & pipeline health'], tech: ['Node.js', 'Playwright', 'OpenAI API', 'Unipile', 'Firestore'], status: 'FORGING' },
+  { title: 'BillFlow', subtitle: '💰 AI-Powered Billing & Cost Intelligence Platform', gradient: 'linear-gradient(135deg, #2a1a0a 0%, #1a0533 50%, #0d1b2a 100%)', emoji: '💰', points: ['📊 Unified billing dashboard — manage all subscriptions & invoices in one place in real-time', '🤖 AI-powered cost advisor with personalized recommendations to reduce spending', '💡 AI insights on cost-cutting strategies across cloud, SaaS & utility bills'], tech: ['Next.js', 'React', 'Framer Motion', 'Recharts', 'Zustand', 'Tailwind CSS'], status: 'FORGING' },
 ];
 
 const CERTIFICATIONS = [
@@ -43,8 +59,10 @@ const CERTIFICATIONS = [
 ];
 
 const EXPERIENCE = [
-  { title: 'Software Development Engineer - 1', company: 'ACREDGE LANDWORKS PVT. LTD.', location: 'Remote', date: 'April 2025 - Present', icon: '🚀', points: ['⚡ Architected the entire backend system from scratch as the primary developer', '🤖 Built AI-powered search using the OpenAI API with filters and relevance handling', '🗺️ Integrated maps and messaging services using Google Maps API, Firebase Authentication and Nodemailer', '🚀 Managed complete deployment and hosting workflows including environment setup and production delivery'] },
-  { title: 'Backend Development Intern', company: 'ACREDGE LANDWORKS PVT. LTD.', location: 'Remote', date: 'October 2024 - March 2025', icon: '💡', points: ['🔧 Built independent backend APIs and data workflows with cleaner and faster request handling', '⚡ Improved performance by refining validation, response handling and authentication flows', '🚀 Delivered enhanced feature modules end to end including development, testing and deployment cycles'] },
+  { title: 'Full Stack Developer — Zappio (AI Voice Platform)', company: 'Acredge Landworks Pvt Ltd', location: 'Remote', date: 'May 2026 - Present', icon: '📞', points: ['⚡ Sole engineer on Zappio, an AI voice-calling platform now handling 1,000+ automated calls daily for 15+ business clients', '🎙️ Built the real-time voice pipeline — telephony streaming (Exotel, Plivo), streaming STT/TTS, and an LLM conversation engine with sub-second barge-in', '🏢 Designed multi-tenant architecture — orgs, RBAC, credit billing, a campaign auto-dialer, and a drag-and-drop call-flow builder', '🚀 Shipped WhatsApp Business automation; deployed on Google Cloud Run with Docker & CI/CD at 99.9% uptime'] },
+  { title: 'Software Development Engineer 1', company: 'Acredge Landworks Pvt Ltd', location: 'Remote', date: 'April 2025 - May 2026', icon: '🚀', points: ['⚡ Architected and owned the entire real-estate marketplace backend from scratch as the sole engineer — 200+ REST endpoints, 10,000+ property listings', '🤖 Built AI-powered property search with the OpenAI API and vector search (Pinecone), plus a recommendation engine', '⚙️ Cut API response times ~40% with multi-tier Redis caching; secured the platform with JWT, rate limiting, and input sanitization', '🗺️ Integrated Google Maps API, Firebase Authentication, and Razorpay/Cashfree payments; owned deployment end to end'] },
+  { title: 'CTO & Co-Founder', company: 'SalonGo', location: 'mysalongo.in', date: '2025 - Present', icon: '✂️', points: ['🏗️ Built a 3-sided salon-booking marketplace (customer, partner, admin) solo, end to end, with Node.js, Firebase/Firestore & Next.js', '💳 Shipped Razorpay payments, WhatsApp notifications, cron settlements, PDF/QR invoicing', '🛡️ Hardened the API with Helmet, mongo-sanitize, XSS protection, HPP & tiered rate limiting'] },
+  { title: 'Backend Development Intern', company: 'Acredge Landworks Pvt Ltd', location: 'Remote', date: 'October 2024 - March 2025', icon: '💡', points: ['🔧 Built independent backend APIs and data workflows with cleaner, faster request handling', '⚡ Improved reliability by refining validation, response handling, and authentication flows', '🚀 Delivered feature modules end to end — development, testing, and deployment cycles'] },
 ];
 
 function RoleCycler() {
@@ -296,8 +314,8 @@ function StarField() {
     let shootingStars: ShootingStar[] = [];
 
     const resize = () => {
-      canvas.width = window.innerWidth;
-      canvas.height = document.documentElement.scrollHeight;
+      canvas.width = Math.max(window.innerWidth, 1);
+      canvas.height = Math.max(document.documentElement.scrollHeight, 1);
       layers.forEach(l => {
         l.stars = Array.from({ length: l.count }, () => {
           const x = Math.random() * canvas.width;
@@ -329,6 +347,10 @@ function StarField() {
 
     const draw = () => {
       time += 0.016;
+      if (canvas.width < 1 || canvas.height < 1) {
+        animId = requestAnimationFrame(draw);
+        return;
+      }
       ctx.clearRect(0, 0, canvas.width, canvas.height);
 
       nebulae.forEach(n => {
@@ -593,13 +615,13 @@ export default function Portfolio() {
               <TypeWriter text="SANDEEP GUPTA" delay={80} />
             </h1>
             <p className="hero-role-line">
+              <span className="role-chip">⚡ Backend Developer</span>
               <span className="role-chip">🚀 Full Stack Developer</span>
-              <span className="role-chip">⚡ Backend Architect</span>
-              <span className="role-chip">🤖 AI Systems Engineer</span>
-              <span className="role-chip">🛡️ API Craftsman</span>
+              <span className="role-chip">🤖 AI / LLM Engineer</span>
+              <span className="role-chip">🛡️ API Architect</span>
             </p>
             <p className="hero-desc-cin">
-              🚀 Engineering production-grade systems from zero to deployment. AI-augmented backends, bulletproof APIs, and battle-tested architecture that scales across cloud, mobile & web.
+              🚀 2.5+ years engineering production-grade systems from zero to deployment. LLM-powered backends (OpenAI · Claude · Gemini), RAG search, bulletproof APIs, and architecture that scales across cloud, mobile & web.
             </p>
             <div className="hero-actions">
               <a href="/Sandeep-Gupta-Resume.pdf" download="Sandeep-Gupta-Resume.pdf" className="cin-btn cin-btn-primary" data-testid="button-download-cv">
@@ -655,7 +677,7 @@ export default function Portfolio() {
               </div>
             </div>
             <p className="about-cin-desc stagger-in" data-testid="text-about-desc">
-              🧠 AI-augmented Full Stack Engineer & Intelligent Systems Architect with 2.5+ years crafting production-grade, scalable systems from scratch. Designed complete backend architectures as lead developer — integrating AI-powered search (OpenAI, Claude, Gemini), secure authentication, Redis caching layers, rate limiting, and real-time communication. From mobile apps to serverless cloud platforms — I ship software that scales. ⚡
+              🧠 Backend-focused Full Stack Developer with 2.5+ years shipping production systems solo, end to end — architecture, code, deployment, and real users. Currently building Zappio, an AI voice-calling platform handling 1,000+ calls daily for 15+ business clients, alongside a real-estate marketplace backend serving 10,000+ property listings. CTO & Co-Founder of SalonGo (live at mysalongo.in). From Chrome extensions to serverless cloud platforms — I ship software that scales. ⚡
             </p>
             <a href="/Sandeep-Gupta-Resume.pdf" target="_blank" className="cin-btn cin-btn-primary stagger-in" data-testid="button-view-cv">
               <span className="cin-btn-glint" />📄 VIEW RESUME
@@ -749,27 +771,59 @@ export default function Portfolio() {
         </div>
 
         <div className="project-category-label building-label stagger-in">
-          <span className="category-icon building-icon">🔨</span>
-          <span>IN THE FORGE</span>
+          <span className="category-icon building-icon">🚀</span>
+          <span>FLAGSHIP & IN THE FORGE</span>
           <span className="category-line building-line" />
         </div>
 
         <div className="projects-showcase">
-          {BUILDING_PROJECTS.map((proj, i) => (
+          {BUILDING_PROJECTS.map((proj, i) => {
+            const isLive = proj.status === 'LIVE';
+            const isShipped = proj.status === 'SHIPPED';
+            const hasLive = !!proj.live;
+            const hasCode = !!proj.code;
+            const hasImg = !!proj.img;
+            return (
             <div className={`project-cin-card stagger-in ${i % 2 === 1 ? 'project-reverse' : ''}`} key={`build-${i}`} data-testid={`card-project-building-${i}`}>
+              {hasImg ? (
+                <div className="project-cin-img-wrap">
+                  <img src={proj.img} alt={proj.title} className="project-cin-img" />
+                  {(hasLive || hasCode) && (
+                    <div className="project-cin-overlay">
+                      {hasLive && (
+                        <a href={proj.live} target="_blank" rel="noopener noreferrer" className="cin-btn cin-btn-sm" data-testid={`link-project-building-live-${i}`}>🔴 LIVE</a>
+                      )}
+                      {hasCode && (
+                        <a href={proj.code} target="_blank" rel="noopener noreferrer" className="cin-btn cin-btn-sm cin-btn-ghost-sm" data-testid={`link-project-building-code-${i}`}>💻 CODE</a>
+                      )}
+                    </div>
+                  )}
+                </div>
+              ) : (
               <div className="project-cin-img-wrap building-img-wrap">
                 <div className="building-img-bg" style={{ background: proj.gradient }}>
                   <div className="building-overlay-content">
                     <span className="building-emoji">{proj.emoji}</span>
-                    <span className="building-pulse-text">⚡ {proj.status}...</span>
+                    <span className="building-pulse-text">{isLive || isShipped ? '🟢' : '⚡'} {proj.status}{isLive || isShipped ? '' : '...'}</span>
                   </div>
+                  {(hasLive || hasCode) && (
+                    <div className="project-cin-overlay">
+                      {hasLive && (
+                        <a href={proj.live} target="_blank" rel="noopener noreferrer" className="cin-btn cin-btn-sm" data-testid={`link-project-building-live-${i}`}>🔴 LIVE</a>
+                      )}
+                      {hasCode && (
+                        <a href={proj.code} target="_blank" rel="noopener noreferrer" className="cin-btn cin-btn-sm cin-btn-ghost-sm" data-testid={`link-project-building-code-${i}`}>💻 CODE</a>
+                      )}
+                    </div>
+                  )}
                   <div className="building-scanline" />
                   <div className="building-grid" />
                 </div>
               </div>
+              )}
               <div className="project-cin-info">
                 <div className="project-cin-num">{String(i + PROJECTS.length + 1).padStart(2, '0')}</div>
-                <div className="building-badge">🔨 {proj.status}</div>
+                <div className="building-badge">{isLive || isShipped ? '🟢' : '🔨'} {proj.status}</div>
                 <h3 className="project-cin-title">{proj.title}</h3>
                 <span className="project-subtitle">{proj.subtitle}</span>
                 <ul className="project-points">
@@ -780,7 +834,8 @@ export default function Portfolio() {
                 </div>
               </div>
             </div>
-          ))}
+          );
+          })}
         </div>
       </section>
 
@@ -854,9 +909,9 @@ export default function Portfolio() {
 }
 
 function ContactForm() {
-  const [status, setStatus] = useState<'idle' | 'sent'>('idle');
+  const [status, setStatus] = useState<'idle' | 'sending' | 'sent' | 'error'>('idle');
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const form = e.currentTarget;
     const name = (form.elements.namedItem('name') as HTMLInputElement).value;
@@ -864,13 +919,37 @@ function ContactForm() {
     const message = (form.elements.namedItem('message') as HTMLTextAreaElement).value;
     if (!name || !email || !message) return;
 
-    const subject = encodeURIComponent(`Portfolio Contact from ${name}`);
-    const body = encodeURIComponent(`${message}\n\nFrom: ${name}\nEmail: ${email}`);
-    window.open(`mailto:sandeepguptax2003@gmail.com?subject=${subject}&body=${body}`, '_self');
+    setStatus('sending');
+    try {
+      const res = await fetch('https://formsubmit.co/ajax/sandeepguptax2003@gmail.com', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+        body: JSON.stringify({
+          name,
+          email,
+          message,
+          _subject: `Portfolio Contact from ${name}`,
+          _template: 'table',
+          _captcha: 'false',
+          _autoresponse: `Hey ${name},\n\nThanks for reaching out — got your message and I'll get back to you soon.\n\n— Sandeep`,
+        }),
+      });
+      const data = await res.json();
+      if (!res.ok || data.success !== 'true') throw new Error('Request failed');
+      setStatus('sent');
+      form.reset();
+    } catch {
+      setStatus('error');
+    } finally {
+      setTimeout(() => setStatus('idle'), 4000);
+    }
+  };
 
-    setStatus('sent');
-    form.reset();
-    setTimeout(() => setStatus('idle'), 3000);
+  const labels: Record<typeof status, string> = {
+    idle: '🚀 SEND MESSAGE',
+    sending: '⏳ SENDING...',
+    sent: '✅ MESSAGE SENT',
+    error: '❌ FAILED — TRY AGAIN',
   };
 
   return (
@@ -887,9 +966,14 @@ function ContactForm() {
         <label>💬 MESSAGE</label>
         <textarea name="message" placeholder="Your message..." required rows={4} data-testid="input-message" />
       </div>
-      <button type="submit" className="cin-btn cin-btn-primary cin-btn-full" data-testid="button-send-message">
+      <button
+        type="submit"
+        className="cin-btn cin-btn-primary cin-btn-full"
+        disabled={status === 'sending'}
+        data-testid="button-send-message"
+      >
         <span className="cin-btn-glint" />
-        {status === 'sent' ? '✅ OPENING EMAIL CLIENT' : '🚀 SEND MESSAGE'}
+        {labels[status]}
       </button>
     </form>
   );

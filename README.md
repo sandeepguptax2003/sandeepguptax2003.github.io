@@ -14,9 +14,9 @@
 
 [![Portfolio](https://img.shields.io/badge/🌐_PORTFOLIO-ff6600?style=for-the-badge&logoColor=white)](https://sandeepguptax2003.github.io/)
 [![Gmail](https://img.shields.io/badge/📧_EMAIL-c27828?style=for-the-badge&logoColor=white)](mailto:sandeepguptax2003@gmail.com)
-[![LinkedIn](https://img.shields.io/badge/LINKEDIN-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/sandeep-gupta)
-[![Twitter](https://img.shields.io/badge/TWITTER-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white)](https://twitter.com/sandeepx2003)
-[![Resume](https://img.shields.io/badge/📄_RESUME-e8a84c?style=for-the-badge&logoColor=white)](https://drive.google.com/file/d/1G8Q2FGZyhUg2IztQ0vv6Eo3bGWrWlBY6/view?usp=sharing)
+[![LinkedIn](https://img.shields.io/badge/LINKEDIN-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/sandeep-gupta-a1b679263/)
+[![Twitter](https://img.shields.io/badge/TWITTER-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white)](https://twitter.com/SandeepxCoder)
+[![Resume](https://img.shields.io/badge/📄_RESUME-e8a84c?style=for-the-badge&logoColor=white)](https://sandeepguptax2003.github.io/Sandeep-Gupta-Resume.pdf)
 
 </div>
 
@@ -28,11 +28,11 @@
 
 ```js
 const sandeep = {
-    title: "Full Stack Developer | Backend Architect | AI Engineer",
+    title: "Backend Developer | Full Stack Developer | AI/LLM Engineer",
     location: "India 🇮🇳",
     experience: "2.5+ Years",
     projectsShipped: "46+",
-    currentFocus: ["Scalable Backend Systems", "AI Integration", "Cloud Architecture"],
+    currentFocus: ["LLM-Powered Backends", "RAG & AI Agents", "Scalable System Design"],
     funFact: "I debug with console.log and I'm not ashamed 😄",
     motto: "Ship fast, iterate faster 🚀"
 };
@@ -42,11 +42,12 @@ const sandeep = {
 
 - 🔥 **2.5+ years** of building production-grade applications
 - 🚀 Shipped **46+ projects** across web, mobile & AI
-- 💡 Passionate about **backend architecture** & **system design**
-- 🤖 Working with **AI/LLMs** — OpenAI, Claude, Gemini, AWS Bedrock
-- ☁️ Cloud-native with **AWS, Firebase, Google Cloud**
+- 💡 Passionate about **backend architecture**, **system design** & **API security**
+- 🤖 Building with **LLMs** — OpenAI, Claude, Gemini, AWS Bedrock, RAG, AI Agents
+- ☁️ Cloud-native with **AWS, Firebase, Google Cloud**, Docker & CI/CD
 - 📱 Cross-platform mobile with **React Native**
-- 🎯 Currently building: **BillFlow** | **Matguns** | **Cortex AI**
+- 📞 Sole engineer on **Zappio** — AI voice-calling platform handling 1,000+ calls/day for 15+ business clients
+- 🎯 CTO & Co-Founder at **[SalonGo](https://mysalongo.in)** — building **Matguns** (Android/iOS) & **Lead Shera**
 
 <br clear="right"/>
 
@@ -79,20 +80,24 @@ const sandeep = {
 ![REST API](https://img.shields.io/badge/REST_API-FF6C37?style=for-the-badge&logo=postman&logoColor=white)
 ![JWT](https://img.shields.io/badge/JWT-000000?style=for-the-badge&logo=jsonwebtokens&logoColor=white)
 
-### 🤖 AI & Intelligence
+### 🤖 AI & LLM Engineering
 ![OpenAI](https://img.shields.io/badge/OpenAI-412991?style=for-the-badge&logo=openai&logoColor=white)
 ![Anthropic Claude](https://img.shields.io/badge/Claude_AI-D4A574?style=for-the-badge&logo=anthropic&logoColor=white)
 ![Google Gemini](https://img.shields.io/badge/Google_Gemini-4285F4?style=for-the-badge&logo=google&logoColor=white)
 ![AWS Bedrock](https://img.shields.io/badge/AWS_Bedrock-FF9900?style=for-the-badge&logo=amazonaws&logoColor=white)
+![RAG](https://img.shields.io/badge/RAG-6E56CF?style=for-the-badge&logoColor=white)
+![Prompt Engineering](https://img.shields.io/badge/Prompt_Engineering-8A2BE2?style=for-the-badge&logoColor=white)
 ![Pinecone](https://img.shields.io/badge/Pinecone-000000?style=for-the-badge&logoColor=white)
 ![Algolia](https://img.shields.io/badge/Algolia-003DFF?style=for-the-badge&logo=algolia&logoColor=white)
 
-### ☁️ Cloud & Infrastructure
+### ☁️ Cloud & DevOps
 ![AWS S3](https://img.shields.io/badge/AWS_S3-569A31?style=for-the-badge&logo=amazons3&logoColor=white)
 ![DynamoDB](https://img.shields.io/badge/DynamoDB-4053D6?style=for-the-badge&logo=amazondynamodb&logoColor=white)
 ![AWS SES](https://img.shields.io/badge/AWS_SES-DD344C?style=for-the-badge&logo=amazonaws&logoColor=white)
 ![Firebase](https://img.shields.io/badge/Firebase-FFCA28?style=for-the-badge&logo=firebase&logoColor=black)
 ![Google Cloud](https://img.shields.io/badge/Google_Cloud-4285F4?style=for-the-badge&logo=googlecloud&logoColor=white)
+![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
+![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-2088FF?style=for-the-badge&logo=githubactions&logoColor=white)
 
 ### 📱 Mobile & Integration
 ![React Native](https://img.shields.io/badge/React_Native-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
@@ -122,11 +127,14 @@ const sandeep = {
 
 <div align="center">
 
-| 🚀 Project | 📝 Description | 🛠️ Stack |
-|:---:|:---|:---|
-| **BillFlow** | AI-powered billing management with cost optimization & spending analytics | `Next.js` `Framer Motion` `Recharts` `Zustand` `Tailwind` |
-| **Matguns** | Competitive esports arena with real-money tournaments for BGMI, Valorant, Free Fire | `React Native` `Firebase` `Razorpay` `React Navigation` |
-| **Cortex AI** | AI meeting assistant — auto Jira/Notion tickets, Slack/Email, deadline tracking | `AWS Bedrock` `DynamoDB` `S3` `Express` `Slack API` `SES` |
+| 🚀 Project | 📝 Description | 🛠️ Stack | Status |
+|:---:|:---|:---|:---:|
+| **Zappio** | AI voice-calling platform — 1,000+ automated calls/day for 15+ business clients | `Node.js` `LLM` `Exotel/Plivo` `React` `Next.js` `GCP` | 🟢 Live |
+| **[SalonGo](https://mysalongo.in)** | CTO & Co-Founder — 3-sided salon-booking marketplace, customer/partner/admin apps | `Node.js` `Firebase` `Next.js` `Razorpay` `WhatsApp API` | 🟢 Live |
+| **[Cortex AI](https://github.com/sandeepguptax2003/Cortex-AI-Backend)** | AI meeting assistant — real-time action items, auto ticketing, Chrome Extension. AWS 10,000 AIdeas 2025 Semifinalist | `Claude` `Node.js` `DynamoDB` `AWS` `Slack API` | ✅ Shipped |
+| **Matguns** | Android & iOS esports tournament app — real-money BGMI/Valorant/Free Fire play | `React Native` `Firebase` `Razorpay` `React Navigation` | 🔨 Building |
+| **Lead Shera** | LinkedIn lead-gen & outreach automation | `Node.js` `Playwright` `OpenAI` `Unipile` | 🔨 Building |
+| **BillFlow** | AI-powered billing management with cost optimization & spending analytics | `Next.js` `Framer Motion` `Recharts` `Zustand` `Tailwind` | 🔨 Building |
 
 </div>
 
@@ -138,38 +146,10 @@ const sandeep = {
 
 <div align="center">
 
-<img width="49%" src="https://github-readme-stats.vercel.app/api?username=sandeepguptax2003&theme=radical&hide_border=true&include_all_commits=true&count_private=true&bg_color=0d1117&title_color=e8a84c&text_color=f0e6d6&icon_color=ff6600&ring_color=c27828" />
+<img width="49%" src="https://github-stats-extended.vercel.app/api?username=sandeepguptax2003&theme=radical&hide_border=true&include_all_commits=true&count_private=true&bg_color=0d1117&title_color=e8a84c&text_color=f0e6d6&icon_color=ff6600&ring_color=c27828" />
 <img width="49%" src="https://github-readme-streak-stats.herokuapp.com/?user=sandeepguptax2003&theme=radical&hide_border=true&background=0d1117&ring=c27828&fire=ff6600&currStreakLabel=e8a84c&sideLabels=e8a84c&currStreakNum=f0e6d6&sideNums=f0e6d6&dates=a89880" />
 
-<img width="40%" src="https://github-readme-stats.vercel.app/api/top-langs/?username=sandeepguptax2003&theme=radical&hide_border=true&include_all_commits=true&count_private=true&layout=compact&bg_color=0d1117&title_color=e8a84c&text_color=f0e6d6" />
-
-</div>
-
-<br/>
-
-<div align="center">
-
-<img src="https://github-readme-activity-graph.vercel.app/graph?username=sandeepguptax2003&bg_color=0d1117&color=e8a84c&line=ff6600&point=c27828&area_color=e8a84c&area=true&hide_border=true&custom_title=Contribution%20Graph" width="95%" />
-
-</div>
-
----
-
-## 🏆 **GitHub Trophies**
-
-<div align="center">
-
-![](https://github-profile-trophy.vercel.app/?username=sandeepguptax2003&theme=radical&no-frame=true&no-bg=true&margin-w=10&margin-h=10&column=7)
-
-</div>
-
----
-
-## 🔝 **Top Contributed Repos**
-
-<div align="center">
-
-![](https://github-contributor-stats.vercel.app/api?username=sandeepguptax2003&limit=5&theme=radical&combine_all_yearly_contributions=true&hide_border=true&bg_color=0d1117&title_color=e8a84c&text_color=f0e6d6)
+<img width="40%" src="https://github-stats-extended.vercel.app/api/top-langs/?username=sandeepguptax2003&theme=radical&hide_border=true&include_all_commits=true&count_private=true&layout=compact&bg_color=0d1117&title_color=e8a84c&text_color=f0e6d6" />
 
 </div>
 
