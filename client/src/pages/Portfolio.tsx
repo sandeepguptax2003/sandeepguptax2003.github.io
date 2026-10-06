@@ -2,7 +2,6 @@ import { useEffect, useRef, useState, useCallback } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
-import personalImg from '@assets/My-Personal-Image_1771954928164.png';
 import minecraftImg from '@assets/MineCraft-Personal-Image_1772205847377.png';
 import bookishImg from '@assets/Bookish_treasure_1771954928160.png';
 import chatmateImg from '@assets/ChatMate_1771954928161.png';
@@ -12,6 +11,50 @@ import salongoImg from '@assets/salongo-hero_1.jpg';
 import awsLogo from '@assets/aws logo.svg';
 
 gsap.registerPlugin(ScrollTrigger);
+
+function IntroVideo() {
+  const videoRef = useRef<HTMLVideoElement>(null);
+  const [started, setStarted] = useState(false);
+
+  const start = () => {
+    const v = videoRef.current;
+    if (!v) return;
+    v.muted = false;
+    setStarted(true);
+    v.play();
+  };
+
+  const fullscreen = () => {
+    const v = videoRef.current;
+    if (!v) return;
+    start();
+    v.requestFullscreen?.();
+  };
+
+  return (
+    <div className="about-video-wrap">
+      <video
+        ref={videoRef}
+        className="about-img-cin about-video"
+        src="/intro.mp4"
+        poster="/intro-poster.jpg"
+        preload="none"
+        playsInline
+        controls={started}
+        data-testid="video-about"
+      />
+      {!started && (
+        <button type="button" className="about-video-tap" onClick={start} aria-label="Play intro video with sound" data-testid="button-play-intro">
+          <span className="about-video-tap-icon">▶</span>
+          <span className="about-video-tap-label">TAP ME</span>
+        </button>
+      )}
+      <button type="button" className="about-video-full" onClick={fullscreen} aria-label="Watch intro video in full screen" data-testid="button-fullscreen-intro">
+        ⛶ WATCH FULL SCREEN
+      </button>
+    </div>
+  );
+}
 
 const HERO_TITLES = ['Developer 💻', 'Gamer 🎮', 'Adventurer 🏔️', 'Tech Enthusiast ⚡', 'AI Expert 🤖', 'Creator 🚀', 'Problem Solver 🧩', 'Builder 🔨'];
 
@@ -659,7 +702,7 @@ export default function Portfolio() {
         <div className="about-immersive">
           <div className="about-visual parallax-scale">
             <div className="about-img-cin-wrap">
-              <img src={personalImg} alt="Sandeep Gupta" className="about-img-cin" data-testid="img-about" />
+              <IntroVideo />
               <div className="about-img-frame" />
             </div>
           </div>
